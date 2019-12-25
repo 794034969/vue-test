@@ -2,11 +2,13 @@
     <header id="header">
         <el-row class="header-row">
             <el-col :span="6" class="header-logo">
-                <img src="@/assets/images/sys-logo.png" alt="">
+                <img src="@/assets/images/sys-logo.svg" alt="">
             </el-col>
             <el-col :span="12">
                <nav class="header-nav">
-                   <ul><li v-for="(item,index) in navList" :key="index" @click="toPath(item.path)">{{ item.value }}</li></ul>
+                   <router-link v-for="(item,index) in navList" :key="index" :to="item.path" class="nav-default" >
+                       {{ item.value }}
+                   </router-link>
                </nav>
             </el-col>
             <el-col :span="6" class="header-btn">
@@ -24,14 +26,7 @@
     export default class Header extends Vue{
         //这里写钩子函数，监听器，data，methods，计算属性等
         //可以在使用typescript的一些类的private public readonly get set等
-        @Provide() private navList: object[] = NAV_LIST;//定制属性，替换data,以后正常情况下直接这样使用，当然用data也是可以的，但是不推荐
-
-        private toPath(path: string): void{ //methods的写法就变成了一个简单的类的方法
-            if(this.$route.path==path) return //若路径相同（重复点击），vue会有错误提示
-            this.$router.push({
-                path:path
-            })
-        }
+        @Provide() private navList: any = NAV_LIST;//定制属性，替换data,以后正常情况下直接这样使用，当然用data也是可以的，但是不推荐
 
         //Emit 给父组件传值、触发父组件事件
         // @Emit("closeDialog",'触发事件传递给父组件的字符串')
@@ -60,22 +55,33 @@
     #header{
         .header-row{
             width: 100%;
+            min-width: 1300px;
             height:80px;
             .header-logo{
                 text-align: right;
                 line-height: 80px;
                 img{
+                    width: 200px;
+                    height: 56px;
                     vertical-align: middle
                 }
             }
             .header-nav{
                 height: 80px;
-                li{
+                .nav-default{
                     width: 80px;
                     height: 80px;
                     float: left;
+                    font-size: 18px;
                     line-height: 80px;
                     text-align: center;
+                    color: #333333;
+                    &:hover{
+                        color: #936329;
+                    }
+                }
+                .router-link-active {
+                    color: #936329;
                 }
             }
             .header-btn{

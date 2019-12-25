@@ -12,20 +12,20 @@ export  default [
     {
         path: '/index',
         name: 'index',
-        component: () => import(/* webpackChunkName: "index" */ '@/views/index.vue'),  //路由懒加载，webpackChunkName打包为一个js文件，否则会按单个组件生产js
-        // meta: {icon: '', keepAlive: true, title: 'index'},
+        component: () => import(/* webpackChunkName: "index" */ '@/views/index.tsx'),  //路由懒加载，webpackChunkName打包为一个js文件，否则会按单个组件生产js
+        meta: {icon: '', keepAlive: false, title: 'index'},
         children:[
             {
                 path: '/home',
                 name: 'home',
                 component: () => import(/* webpackChunkName: "index" */ '@/views/home/home.vue'),
-                // meta: {icon: '', keepAlive: true, title: 'home'}
+                meta: {icon: '', keepAlive: false, title: 'home'}
             },
             {
                 path: '/live',
                 name: 'live',
                 component: () => import(/* webpackChunkName: "index" */ '@/views/live/live.vue'),
-                // meta: {icon: '', keepAlive: true, title: 'live'}
+                meta: {icon: '', keepAlive: false, title: 'live'}
             }
         ]
     },

@@ -10,3 +10,14 @@ export const NAV_LIST = [
     {path: '/vip', value: 'VIP'},
     {path: '/about', value: '关于金沙'}
 ]
+export const SWIPER_RESOURCES_CONFIG = {
+    mainSwiper: [
+        { src: require('../assets/images/banner/banner01.png')},  //在动态绑定src时，webpack不识别路径，需要先将图片引入
+        { src: require('../assets/images/banner/banner02.jpg')},
+        { src: require('../assets/images/banner/banner03.jpg')},
+        { src: require('../assets/images/banner/banner04.png')},
+        { src: require('../assets/images/banner/banner05.jpg')},
+        { src: require('../assets/images/banner/banner06.png')},
+        { src: require('../assets/images/banner/banner07.jpg')},
+    ],
+}

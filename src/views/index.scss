@@ -1,0 +1,11 @@
+#index{
+  width: 100%;
+  min-width: 1300px;
+  height: 100%;
+  overflow-y: hidden;
+  .content{
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow-y: auto;
+  }
+}
