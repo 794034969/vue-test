@@ -12,12 +12,19 @@ export const NAV_LIST = [
 ]
 export const SWIPER_RESOURCES_CONFIG = {
     mainSwiper: [
-        { src: require('../assets/images/banner/banner01.png')},  //在动态绑定src时，webpack不识别路径，需要先将图片引入
-        { src: require('../assets/images/banner/banner02.jpg')},
-        { src: require('../assets/images/banner/banner03.jpg')},
-        { src: require('../assets/images/banner/banner04.png')},
-        { src: require('../assets/images/banner/banner05.jpg')},
-        { src: require('../assets/images/banner/banner06.png')},
-        { src: require('../assets/images/banner/banner07.jpg')},
+        { src: require('@/assets/images/banner/banner01.png'),path:""},  //在动态绑定src时，webpack不识别路径，需要先将图片引入
+        { src: require('@/assets/images/banner/banner02.jpg'),path:""},
+        { src: require('@/assets/images/banner/banner03.jpg'),path:""},
+        { src: require('@/assets/images/banner/banner04.png'),path:""},
+        { src: require('@/assets/images/banner/banner05.jpg'),path:""},
+        { src: require('@/assets/images/banner/banner06.png'),path:""},
+        { src: require('@/assets/images/banner/banner07.jpg'),path:""},
     ],
 }
+export const HOT_GAME_IMAGES=[
+    { src: require("@/assets/images/home/hot-live.png"),path:""},
+    { src: require("@/assets/images/home/hot-chess.png") ,path:""},
+    { src: require("@/assets/images/home/hot-lottery.png"), path:""},
+    { src: require("@/assets/images/home/hot-buyu.png"), path:""},
+    { src: require("@/assets/images/home/hot-slot.png"), path:""}
+]

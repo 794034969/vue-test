@@ -12,10 +12,10 @@ export default class Index extends Vue{
         return (
             <section id="index">
                 <Header/>
-                <div class="content">
+                <section class="content">
                     <router-view/>
                     <Footer/>
-                </div>
+                </section>
             </section>
         )
     }

@@ -1,22 +1,18 @@
 <template>
     <header id="header">
-        <el-row class="header-row">
-            <el-col :span="6" class="header-logo">
-                <img src="@/assets/images/sys-logo.svg" alt="">
-            </el-col>
-            <el-col :span="12">
-               <nav class="header-nav">
-                   <router-link v-for="(item,index) in navList" :key="index" :to="item.path" class="nav-default" >
-                       {{ item.value }}
-                   </router-link>
-               </nav>
-            </el-col>
-            <el-col :span="6" class="header-btn">
-                <el-button>注册</el-button>
-                <el-button>登录</el-button>
-                <el-button>试玩</el-button>
-            </el-col>
-        </el-row>
+        <section class="header-logo">
+            <img src="@/assets/images/sys-logo.svg" alt="">
+        </section>
+       <nav class="header-nav">
+           <router-link v-for="(item,index) in navList" :key="index" :to="item.path" class="nav-default" >
+               {{ item.value }}
+           </router-link>
+       </nav>
+        <section class="header-btn">
+            <el-button>注册</el-button>
+            <el-button>登录</el-button>
+            <el-button>试玩</el-button>
+        </section>
     </header>
 </template>
 <script lang="ts"> //首先要注意，这里的lang要改成ts才能支持ts写法，文件还是.vue文件
@@ -53,41 +49,61 @@
 </script>
 <style lang="scss" scoped>
     #header{
-        .header-row{
-            width: 100%;
-            min-width: 1300px;
-            height:80px;
-            .header-logo{
-                text-align: right;
-                line-height: 80px;
-                img{
-                    width: 200px;
-                    height: 56px;
-                    vertical-align: middle
-                }
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        .header-logo{
+            margin: 0 auto;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            img{
+                width: 200px;
+                height: 56px;
             }
-            .header-nav{
-                height: 80px;
-                .nav-default{
-                    width: 80px;
-                    height: 80px;
-                    float: left;
-                    font-size: 18px;
-                    line-height: 80px;
-                    text-align: center;
-                    color: #333333;
-                    &:hover{
-                        color: #936329;
-                    }
-                }
-                .router-link-active {
+        }
+        .header-nav{
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .nav-default{
+                width: 75px;
+                height: 50px;
+                line-height: 50px;
+                position: relative;
+                &:hover{
                     color: #936329;
                 }
+                &:hover::after{
+                    content: ''; // 必须
+                    position: absolute;
+                    left: 22px;
+                    bottom: 4px;
+                    width: 30px;
+                    height: 2PX;
+                    background-color: #936329;
+                }
             }
-            .header-btn{
-                height: 80px;
-                line-height: 80px;
+            .router-link-active{
+                color: #936329;
+                &::after{
+                    content: ''; // 必须
+                    position: absolute;
+                    left: 22px;
+                    bottom: 4px;
+                    width: 30px;
+                    height: 2PX;
+                    background-color: #936329;
+                }
             }
+        }
+        .header-btn{
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
         }
     }
 </style>
