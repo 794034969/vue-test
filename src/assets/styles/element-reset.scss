@@ -1,0 +1,18 @@
+.el-menu--horizontal > .el-menu-item{
+  height: 77px!important;
+  line-height: 77px!important;
+  border-bottom: 3px solid #c8a675;
+  color: #6c6c6c!important;
+  font-size: 16px;
+}
+.el-menu--horizontal > .el-menu-item.is-active {
+  border-bottom: 3px solid #c8a675!important;
+  color: #c8a675!important;
+}
+.el-menu--horizontal .el-menu-item:not(.is-disabled):hover{
+  border-bottom: 3px solid #c8a675!important;
+  color: #c8a675!important;
+}
+.el-menu.el-menu--horizontal {
+  border-bottom: none!important;
+}

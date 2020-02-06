@@ -3,7 +3,7 @@
         <el-carousel :interval="2000" :type="typeSwiper" :height="bannerHeight + 'px'"> <!-- 当幻灯片小于4张时去掉type切换为普通模式 -->
             <el-carousel-item v-for="(item,index) in imagesSwiper" :key="index">
                 <router-link :to="item.path">
-                    <img alt="" :src="item.src" class="img-banner"/>
+                    <img alt="" :src="item.src"/>
                 </router-link>
             </el-carousel-item>
         </el-carousel>
@@ -37,7 +37,8 @@
 </template>
 <script lang="ts">
     import { Component,Provide,Vue} from 'vue-property-decorator'
-    import { SWIPER_RESOURCES_CONFIG,HOT_GAME_IMAGES } from '@/config/constant'
+    import { SWIPER_RESOURCES_CONFIG,HOT_GAME_IMAGES } from '@/config/staticState'
+    import Carousel from "@/components/Carousel.vue";
     @Component
     export default class Home extends Vue{
         //data函数
@@ -99,9 +100,6 @@
 <style scoped lang="scss">
     #home{
         width: 100%;
-        .img-banner{
-            display: block;
-        }
         .home-content{
             width: 100%;
             height: 100%;

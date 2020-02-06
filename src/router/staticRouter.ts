@@ -7,14 +7,15 @@
 export  default [
     {
         path: '/',
-        redirect:'/index'
+        redirect: '/home'
     },
     {
         path: '/index',
         name: 'index',
-        component: () => import(/* webpackChunkName: "index" */ '@/views/index.tsx'),  //路由懒加载，webpackChunkName打包为一个js文件，否则会按单个组件生产js
+        // 路由懒加载，webpackChunkName打包为一个js文件，否则会按单个组件生产js
+        component: () => import(/* webpackChunkName: "index" */ '@/views/index.vue'),
         meta: {icon: '', keepAlive: false, title: 'index'},
-        children:[
+        children: [
             {
                 path: '/home',
                 name: 'home',

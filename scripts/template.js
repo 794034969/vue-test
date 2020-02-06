@@ -71,7 +71,7 @@ export default class About extends Vue {
 }
 `
 
-// scss 模版
+// styles 模版
 const scssTep = `@import "@/assets/scss/variables.scss";
 
 .${dirName}-wrap {
@@ -154,7 +154,7 @@ fs.mkdirSync(`${basePath}/views/${dirName}`) // mkdir
 process.chdir(`${basePath}/views/${dirName}`) // cd views
 fs.writeFileSync(`${dirName}.vue`, VueTep) // vue
 fs.writeFileSync(`${dirName}.ts`, tsTep) // ts
-fs.writeFileSync(`${dirName}.scss`, scssTep) // scss
+fs.writeFileSync(`${dirName}.scss`, scssTep) // styles
 
 process.chdir(`${basePath}/types/views`); // cd types
 fs.writeFileSync(`${dirName}.interface.ts`, interfaceTep) // interface

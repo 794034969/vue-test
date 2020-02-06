@@ -40,8 +40,8 @@ const LOGIN_PAGE_NAME = 'login'
 // })
 
 // 跳转之后
-router.afterEach(to => {
-
-})
+// router.afterEach(to => {
+//
+// })
 
 export default router
