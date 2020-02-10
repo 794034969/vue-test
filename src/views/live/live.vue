@@ -1,7 +1,6 @@
 <template>
     <section id="live">
-<!--        <img :src="banner" alt="">-->
-        <Carousel :carouselHeight="carouselHeight" :carouselTime="carouselTime"  :carouselType="carouselType"  :carouselImages="carouselImages"/>
+        <img :src="banner" alt="">
         <section style="width: 1280px;margin: 0 auto;padding: 20px 0;" class="clear-float">
             <el-card class="box-card">
                 <div class="clear-float">
@@ -51,21 +50,14 @@
     </section>
 </template>
 <script lang="ts">
-    import { reactive, ref, computed, watch, onMounted, Ref, createComponent, toRefs  } from "@vue/composition-api"
+    import { ref, Ref, toRefs, reactive, computed, watch, onMounted, createComponent } from "@vue/composition-api"
 
     export default createComponent({
-        components: {
-            Carousel
-        },
         setup(props, { root }) {
             const state: any = reactive({
                 banner: require("@/assets/images/banner/banner07.jpg"),
                 live1: require("@/assets/images/live/live-1.jpg"),
                 live2: require("@/assets/images/live/live-2.jpg"),
-                carouselHeight: "450px",
-                carouselTime: 2000,
-                carouselType: "",
-                carouselImages: SWIPER_RESOURCES_CONFIG
             })
             return {
                 ...toRefs(state)

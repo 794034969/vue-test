@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "skipLibCheck": true,   //跳过库检查
     "baseUrl": ".",
     "types": [
       "webpack-env"

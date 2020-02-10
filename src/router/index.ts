@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import  routes from './staticRouter' //只能命名为routes
+import routes from './staticRouter' // 只能命名为routes
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode:"hash",
+  mode: "hash",
   routes
 })
 

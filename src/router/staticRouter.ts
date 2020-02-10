@@ -27,6 +27,12 @@ export  default [
                 name: 'live',
                 component: () => import(/* webpackChunkName: "index" */ '@/views/live/live.vue'),
                 meta: {icon: '', keepAlive: false, title: 'live'}
+            },
+            {
+                path: '/slot',
+                name: 'slot',
+                component: () => import(/* webpackChunkName: "index" */ '@/components/test.vue'),
+                meta: {icon: '', keepAlive: false, title: 'slot'}
             }
         ]
     },
