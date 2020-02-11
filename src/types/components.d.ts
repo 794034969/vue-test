@@ -1,5 +1,6 @@
 declare namespace Carousel {
     export interface PropsParams {
+        carouselBanner: boolean
         carouselHeight: string
         carouselTime: number
         carouselImages: Array<{src: string, path: string}>

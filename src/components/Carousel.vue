@@ -12,13 +12,15 @@
 
     export default createComponent({
         props: {
+            carouselBanner: { type: Boolean, required: false, default: false },  // 是否是banner图
             carouselHeight: { type: String, required: true, default: "450px" },  // 走马灯高度
-            carouselTime: { type: Number, required: true, default: 2000 },  // 走马灯切换时间，单位：毫秒
+            carouselTime: { type: Number, required: false, default: 2000 },  // 走马灯切换时间，单位：毫秒
             carouselImages: { type: Array, required: true, default: ()=> [] }   // 走马灯图片，需要path和src属性
         },
         setup(props: Carousel.PropsParams, { root }) {
             const state: any = reactive({
                 //避免直接更改prop，当父组件重新渲染时，该值都会被覆盖。 使用基于属性值的数据或计算属性
+                isBanner: computed(() => { return props.carouselBanner }),
                 height:  props.carouselHeight,
                 heightComputed: computed({get: () => props.carouselHeight, set: value => state.height = value}),
                 time: computed(() => { return props.carouselTime }),
@@ -28,21 +30,20 @@
                 root.$router.push(path).catch(() => {console.log()})    // 解决NavigationDuplicated在控制台报错
             }
             function initSize() :void {
-                let currentWidth :any = window.document.getElementById('carousel')
+                let currentDom :any = window.document.getElementById('carousel')
                 let scrollWidth: number = 0
-                if(currentWidth !== null) scrollWidth = currentWidth.offsetWidth
-                state.height = `${450 / 1920 * scrollWidth}px`
+                if(currentDom !== null) scrollWidth = currentDom.offsetWidth
+                state.heightComputed = `${450 / 1920 * scrollWidth}px`
             }
             onMounted(() => {
-                initSize()
+                if(state.isBanner) initSize()
                 window.onresize = function(){
                     initSize()
                 }
             })
             return {
                 ...toRefs(state),
-                routerLink,
-                initSize
+                routerLink
             }
         }
     })

@@ -19,10 +19,14 @@ export const SWIPER_RESOURCES_CONFIG = [
     { src: require('@/assets/images/banner/banner06.png'), path: ""},
     { src: require('@/assets/images/banner/banner07.jpg'), path: ""},
 ]
-export const HOT_GAME_IMAGES = [
-    { src: require("@/assets/images/home/hot-live.png"), path: ""},
-    { src: require("@/assets/images/home/hot-chess.png"), path: ""},
-    { src: require("@/assets/images/home/hot-lottery.png"), path: ""},
-    { src: require("@/assets/images/home/hot-buyu.png"), path: ""},
-    { src: require("@/assets/images/home/hot-slot.png"), path: ""}
+export const LIVE_ENTERTAINMENT_IMAGES = [
+    { src: require("@/assets/images/home/banner_01.jpg"), path: ""},
+    { src: require("@/assets/images/home/banner_02.jpg"), path: ""},
+    { src: require("@/assets/images/home/banner_03.jpg"), path: ""}
+]
+export const LIVE_LINK_IMAGES = [
+    { src: require("@/assets/images/home/yinhe_01.png"), path: ""},
+    { src: require("@/assets/images/home/yinhe_02.png"), path: ""},
+    { src: require("@/assets/images/home/yinhe_03.png"), path: ""},
+    { src: require("@/assets/images/home/yinhe_04.png"), path: ""}
 ]
