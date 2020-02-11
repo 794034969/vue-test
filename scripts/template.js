@@ -156,7 +156,7 @@ fs.writeFileSync(`${dirName}.vue`, VueTep) // vue
 fs.writeFileSync(`${dirName}.ts`, tsTep) // ts
 fs.writeFileSync(`${dirName}.scss`, scssTep) // styles
 
-process.chdir(`${basePath}/types/views`); // cd types
+process.chdir(`${basePath}/types/views`); // cd modules
 fs.writeFileSync(`${dirName}.interface.ts`, interfaceTep) // interface
 
 process.chdir(`${basePath}/store/module`); // cd store

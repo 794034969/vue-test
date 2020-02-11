@@ -28,7 +28,7 @@ const VueTep = `<template>
 <script lang="ts">
   import { Component, Vue, Prop } from "vue-property-decorator"
   import { Getter, Action } from 'vuex-class'
-  import { ${capPirName}Data } from '@/types/components/${dirName}.interface'
+  import { ${capPirName}Data } from '@/modules/components/${dirName}.interface'
   // import {  } from "@/components" // 组件
 
   @Component({})

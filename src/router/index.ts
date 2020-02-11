@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routes from './staticRouter' // 只能命名为routes
+// 页面加载进度条
+import NProgress from 'nprogress'  // NProgress.set(0.4) 跳转进度
+import 'nprogress/nprogress.css';     // NProgress.inc()  固定跳转长度
 
 Vue.use(VueRouter)
 
@@ -13,35 +16,14 @@ const router = new VueRouter({
 const LOGIN_PAGE_NAME = 'login'
 
 // 跳转之前
-// router.beforeEach((to, from, next) => {
-  // const token = getToken()
-  // if (!token && to.name !== LOGIN_PAGE_NAME) {
-  //   // 未登录且要跳转的页面不是登录页
-  //   next({
-  //     name: LOGIN_PAGE_NAME // 跳转到登录页
-  //   })
-  // } else if (!token && to.name === LOGIN_PAGE_NAME) {
-  //   // 未登陆且要跳转的页面是登录页
-  //   next() // 跳转
-  // } else if (token && to.name === LOGIN_PAGE_NAME) {
-  //   // 已登录且要跳转的页面是登录页
-  //   next({
-  //     name: 'index' // 跳转到 index 页
-  //   })
-  // } else {
-  //   if (token) {
-  //     next() // 跳转
-  //   } else {
-  //     next({
-  //       name: LOGIN_PAGE_NAME
-  //     })
-  //   }
-  // }
-// })
+router.beforeEach((to, from, next) => {
+  NProgress.start()
+  next()
+})
 
 // 跳转之后
-// router.afterEach(to => {
-//
-// })
+router.afterEach(to => {
+  NProgress.done()
+})
 
 export default router

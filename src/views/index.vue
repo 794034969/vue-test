@@ -1,7 +1,9 @@
 <template>
-    <section>
+    <section id="mian">
         <Header/>
-        <router-view/>
+        <transition name="fade-transform" mode="out-in">
+            <router-view/>
+        </transition>
         <Footer/>
     </section>
 </template>
@@ -17,3 +19,7 @@
         }
     })
 </script>
+<style scoped lang="sass">
+    #mian
+        overflow: hidden
+</style>

@@ -1,3 +1,4 @@
+// 重置element组件样式
 .el-menu--horizontal > .el-menu-item{
   height: 77px!important;
   line-height: 77px!important;
@@ -15,4 +16,31 @@
 }
 .el-menu.el-menu--horizontal {
   border-bottom: none!important;
+}
+// 重置顶部加载进度条主题色
+#nprogress .bar {
+  background: #c8a675;
+  height: 2px;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #c8a675, 0 0 5px #c8a675;
+}
+#nprogress .spinner-icon {
+  border-top-color: #c8a675;
+  border-left-color: #c8a675;
+}
+// 路由切换动画fade-transform
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all .3s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
 }
