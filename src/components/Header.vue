@@ -12,10 +12,10 @@
         setup(props, { root }) {
             const state: any = reactive({
                 navList: NAV_LIST,
-                active: computed(() => { return root.$route.path})
+                active: computed(() => root.$route.path)
             })
             function routerLink(path: string): void {
-                root.$router.push(path).catch(() => {console.log()}) // 解决NavigationDuplicated在控制台报错
+                root.$router.push(path).catch(() => console.log() ) // 解决NavigationDuplicated在控制台报错
             }
             return {
                 ...toRefs(state),

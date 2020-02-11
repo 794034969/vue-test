@@ -23,39 +23,34 @@
     </section>
 </template>
 <script lang="ts">
-    import { Component,Vue } from 'vue-property-decorator'
-    @Component({})
-    export default class Footer extends Vue{
+    import { ref, Ref, toRefs, reactive, computed, watch, onMounted, createComponent } from "@vue/composition-api";
 
-    }
+    export default createComponent({ // TS需要使用 createComponent 来定义组件，才能类型推断
 
+    })
 </script>
-<style lang="scss" scoped>
-    #footer{
-        width: 100%;
-        height: 150px;
-        background-color: #2a2723;
-        display: flex;
-        justify-content: center;
-        .content-box{
-            width: 1200px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            .footer-logo{
-                width: 200px;
-                height: 56px;
-            }
-            .footer-link{
-                width: 600px;
-                display: flex;
-                justify-content: space-around;
-                a {
-                    color: #ac956d;
-                    outline: none;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
+<style lang="sass" scoped>
+    #footer
+        width: 100%
+        height: 150px
+        background-color: #2a2723
+        display: flex
+        justify-content: center
+        .content-box
+            width: 1200px
+            display: flex
+            justify-content: space-around
+            align-items: center
+            .footer-logo
+                width: 200px
+                height: 56px
+
+            .footer-link
+                width: 600px
+                display: flex
+                justify-content: space-around
+                a
+                    color: #ac956d
+                    outline: none
+                    text-decoration: none
 </style>

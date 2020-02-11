@@ -7,8 +7,14 @@ declare namespace Carousel {
     }
 }
 declare namespace Bulletin {
-    export interface BulletinParams {
+    export interface PropsParams {
         bulletinChangeTime: number
         bulletinItems: Array<{text: string}>
+    }
+}
+declare namespace Plate {
+    export interface PropsParams {
+        titleName: string
+        titleDepict: string
     }
 }

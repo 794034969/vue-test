@@ -33,7 +33,7 @@
             titleName: { type: String, require: true, default: ""},     // 公告标题
             titleDepict: { type: String, require: true, default: ""},     // 公告标题
         },
-        setup(props, { root }) {
+        setup(props: Plate.PropsParams, { root }) {
             const state: any = reactive({
                 name: props.titleName,
                 depict: props.titleDepict,

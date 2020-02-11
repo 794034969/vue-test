@@ -35,6 +35,5 @@ export  default [
                 meta: {icon: '', keepAlive: false, title: 'slot'}
             }
         ]
-    },
-
+    }
 ]

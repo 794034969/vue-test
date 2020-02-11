@@ -35,14 +35,14 @@
 
     export default createComponent({
         components: {
-            Carousel,Bulletin,Plate
+            Carousel, Bulletin, Plate
         },
         setup(props, { root }) {
             const state: any = reactive({
                 carouselHeight: "450px",
                 carouselTime: 2000,
                 carouselImages: SWIPER_RESOURCES_CONFIG,
-                bulletinItems: [{ text: "6121" },{ text: "1231" },{ text: "5674" }]
+                bulletinItems: [{ text: "6121" }, { text: "1231" }, { text: "5674" }]
             })
             return {
                 ...toRefs(state)
