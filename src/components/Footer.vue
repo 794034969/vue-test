@@ -7,13 +7,13 @@
                 </router-link>
             </div>
             <div class="footer-link">
-                <router-link to="">用户协议   | </router-link>
-                <router-link to="">关于我们   | </router-link>
-                <router-link to="">博彩责任   | </router-link>
-                <router-link to="">免责条款   | </router-link>
-                <router-link to="">用户隐私   | </router-link>
-                <router-link to="">帮助中心   | </router-link>
-                <router-link to="">在线客服</router-link>
+                <router-link to=""> {{$t('Footer.link1')}}   | </router-link>
+                <router-link to="">{{$t('Footer.link2')}}   | </router-link>
+                <router-link to="">{{$t('Footer.link3')}}   | </router-link>
+                <router-link to="">{{$t('Footer.link4')}}   | </router-link>
+                <router-link to="">{{$t('Footer.link5')}}   | </router-link>
+                <router-link to="">{{$t('Footer.link6')}}   | </router-link>
+                <router-link to="">{{$t('Footer.link7')}}</router-link>
             </div>
             <div class="footer-icon">
                 <img src="@/assets/images/icon/footer-icon1.png" alt="">

@@ -1,14 +1,14 @@
 export const NAV_LIST = [
-    {path: '/home', value: '首页'},
-    {path: '/live', value: '真人'},
-    {path: 'slot', value: '电子'},
-    {path: 'lottery', value: '彩票'},
-    {path: 'sport', value: '体育'},
-    {path: 'chess', value: '棋牌'},
-    {path: 'fishing', value: '捕鱼'},
-    {path: 'promotion', value: '优惠'},
-    {path: 'vip', value: 'VIP'},
-    {path: 'about', value: '关于我们'}
+    {path: '/home', value: 'Header.value1'},
+    {path: '/live', value: 'Header.value2'},
+    {path: 'slot', value: 'Header.value3'},
+    {path: 'lottery', value: 'Header.value4'},
+    {path: 'sport', value: 'Header.value5'},
+    {path: 'chess', value: 'Header.value6'},
+    {path: 'fishing', value: 'Header.value7'},
+    {path: 'promotion', value: 'Header.value8'},
+    {path: 'vip', value: 'Header.value9'},
+    {path: 'about', value: 'Header.value10'}
 ]
 export const SWIPER_RESOURCES_CONFIG = [
     { src: require('@/assets/images/banner/banner01.png'), path: "/home"},  // 在动态绑定src时，webpack不识别路径，需要先将图片引入
