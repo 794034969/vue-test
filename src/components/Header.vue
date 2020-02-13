@@ -20,19 +20,22 @@
 <script lang="ts">
     import { reactive, ref, computed, watch, onMounted, Ref, createComponent, toRefs  } from "@vue/composition-api"
     import { NAV_LIST } from "@/config/staticState"
+    import { setLocalCache, getLocalCache } from "@/config/cache"
+
     export default createComponent({
         setup(props, { root }) {
             const state: any = reactive({
                 navList: NAV_LIST,
                 active: computed(() => root.$route.path ),
-                language: ""
+                language: getLocalCache("language")
             })
             function routerLink(path: string): void {
                 root.$router.push(path).catch(() => console.log() ) // 解决NavigationDuplicated在控制台报错
             }
             function changeLanguages(language: string): void {
-                root.$i18n.locale = language
                 state.language = language
+                root.$i18n.locale = language
+                setLocalCache("language", language)
             }
             return {
                 ...toRefs(state),
