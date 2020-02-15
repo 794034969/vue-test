@@ -4,6 +4,8 @@ import routes from './staticRouter' // 只能命名为routes
 // 页面加载进度条
 import NProgress from 'nprogress'  // NProgress.set(0.4) 跳转进度
 import 'nprogress/nprogress.css';     // NProgress.inc()  固定跳转长度
+// 配置NProgress选项
+// NProgress.configure({ })
 
 Vue.use(VueRouter)
 

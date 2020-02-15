@@ -1,10 +1,10 @@
 <template>
     <section id="live">
-        <img :src="banner" alt="">
+        <el-image :src="banner" lazy></el-image>
         <section style="width: 1280px;margin: 0 auto;padding: 20px 0;" class="clear-float">
             <el-card class="box-card">
                 <div class="clear-float">
-                    <el-image :src="live1"></el-image>
+                    <el-image :src="live1" class="live-images" lazy></el-image>
                     <div style="float: left;width: 270px;height: 230px;padding-left: 20px;">
                         <p style="font-weight: 700;font-size: 14px;">SA真人</p>
                         <p style="color: #c8a675;margin-top: 40px;">贵族式的博弈体验</p>
@@ -15,7 +15,7 @@
             </el-card>
             <el-card class="box-card" style="float: right;">
                 <div class="clear-float">
-                    <el-image :src="live2"></el-image>
+                    <el-image :src="live2" class="live-images" lazy></el-image>
                     <div style="float: left;width: 270px;height: 230px;padding-left: 20px;">
                         <p style="font-weight: 700;font-size: 14px;">BG真人</p>
                         <p style="color: #c8a675;margin-top: 40px;">顶尖技术 实力最强</p>
@@ -26,7 +26,7 @@
             </el-card>
             <el-card class="box-card">
                 <div class="clear-float">
-                    <el-image :src="live1"></el-image>
+                    <el-image :src="live1" class="live-images" lazy></el-image>
                     <div style="float: left;width: 270px;height: 230px;padding-left: 20px;">
                         <p style="font-weight: 700;font-size: 14px;">SA真人</p>
                         <p style="color: #c8a675;margin-top: 40px;">贵族式的博弈体验</p>
@@ -37,7 +37,7 @@
             </el-card>
             <el-card class="box-card" style="float: right;">
                 <div class="clear-float">
-                    <el-image :src="live2"></el-image>
+                    <el-image :src="live2" class="live-images" lazy></el-image>
                     <div style="float: left;width: 270px;height: 230px;padding-left: 20px;">
                         <p style="font-weight: 700;font-size: 14px;">BG真人</p>
                         <p style="color: #c8a675;margin-top: 40px;">顶尖技术 实力最强</p>
@@ -74,7 +74,7 @@
             height: 270px
             margin: 10px 0
             float: left
-            .el-image
+            .live-images
                 width: 320px
                 height: 230px
                 float: left

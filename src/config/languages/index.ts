@@ -34,7 +34,7 @@ export const initLocale = () => {
       return locale
     }
   }
-  // Default language is english
+  // 默认语言中文
   return 'zh'
 }
 

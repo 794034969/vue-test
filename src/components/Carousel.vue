@@ -2,7 +2,7 @@
     <section id="carousel">
         <el-carousel :interval="time" :height="height">
             <el-carousel-item v-for="(item,index) in imagesArray" :key="index" @click="routerLink(item.path)">
-                <img alt="" :src="item.src"/>
+                <el-image :src="item.src"></el-image>
             </el-carousel-item>
         </el-carousel>
     </section>
@@ -37,9 +37,7 @@
             }
             onMounted(() => {
                 if (state.isBanner) { initSize() }
-                window.onresize = () => {
-                    initSize()
-                }
+                window.onresize = () => { initSize() }
             })
             return {
                 ...toRefs(state),
