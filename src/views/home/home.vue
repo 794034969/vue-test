@@ -50,39 +50,50 @@
         }
     })
 </script>
-<style lang="sass" scoped>
-    #home
-        width: 100%
-        height: 100%
-        .home-content
-            width: 1242px
-            margin: 0 auto
-            .plate-title
-                width: 100%
-                height: 30px
-                .plate-title-head
-                    height: 30px
-                    line-height: 30px
-                    float: left
-                    .icon-title
-                        display: inline-block
-                        width: 4px
-                        height: 18px
-                        background: #c8a675
-                        margin-right: 10px
-                    .title-text-main
-                        font-size: 22px
-                        margin-right: 10px
-                    .title-text-minor
-                        font-size: 16px
-                .plate-title-content
-                    float: right
-            .plate-content
-                .plate-content-left
-                    width: 800px
-                    float: left
-                    padding: 20px
-                .plate-content-right
-                    float: right
-                    width: 400px
+<style lang="scss" scoped>
+    #home {
+        width: 100%;
+        height: 100%;
+        .home-content {
+            width: 1242px;
+            margin: 0 auto;
+            .plate-title {
+                width: 100%;
+                height: 30px;
+                .plate-title-head {
+                    height: 30px;
+                    line-height: 30px;
+                    float: left;
+                    .icon-title {
+                        display: inline-block;
+                        width: 4px;
+                        height: 18px;
+                        background: #c8a675;
+                        margin-right: 10px;
+                    }
+                    .title-text-main {
+                        font-size: 22px;
+                        margin-right: 10px;
+                    }
+                    .title-text-minor {
+                        font-size: 16px;
+                    }
+                }
+                .plate-title-content{
+                    float: right;
+                }
+            }
+            .plate-content {
+                .plate-content-left {
+                    width: 800px;
+                    float: left;
+                    padding: 20px;
+                }
+                .plate-content-right {
+                    float: right;
+                    width: 400px;
+                }
+            }
+        }
+    }
 </style>

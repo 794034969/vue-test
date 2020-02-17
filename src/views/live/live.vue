@@ -65,17 +65,20 @@
         }
     })
 </script>
-<style lang="sass" scoped>
-    #live
-        width: 100%
-        height: 100%
-        .box-card
-            width: 632px
-            height: 270px
-            margin: 10px 0
-            float: left
-            .live-images
-                width: 320px
-                height: 230px
-                float: left
+<style lang="scss" scoped>
+    #live {        
+        width: 100%;
+        height: 100%;
+        .box-card {
+            width: 632px;
+            height: 270px;
+            margin: 10px 0;
+            float: left;
+            .live-images {
+                width: 320px;
+                height: 230px;
+                float: left;
+            }
+        }
+    }
 </style>

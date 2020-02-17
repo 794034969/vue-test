@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from '@/App.vue'
 import router from '@/router'
 import store from '@/store'
-import '@/assets/styles/reset.sass' // 样式重置
+import '@/assets/styles/reset.scss' // 样式重置
 Vue.config.productionTip = false
 // vue3 Composition-Api 在2.0体验
 import VueCompositionApi from '@vue/composition-api';

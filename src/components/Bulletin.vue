@@ -53,16 +53,19 @@
     })
 </script>
 
-<style lang="sass" scoped>
-    #bulletin
-        width: 100%
-        height: 50px
-        line-height: 50px
-        overflow: hidden
-        padding: 0 30px
-        margin: 0 auto
-        border-bottom: 1px solid #eaeaea
-        .bulletin-animate
-            transition: all 1s
-            margin-top: -50px
+<style lang="scss" scoped>
+    #bulletin {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        overflow: hidden;
+        padding: 0 30px;
+        margin: 0 auto;
+        border-bottom: 1px solid #eaeaea;
+         .bulletin-animate {
+             transition: all 1s;
+            margin-top: -50px;
+         }
+            
+    }
 </style>

@@ -46,8 +46,9 @@
         }
     })
 </script>
-<style lang="sass" scoped>
-    #carousel
-        width: 100%
-        height: 100%
+<style lang="scss" scoped>
+    #carousel {
+        width: 100%;
+        height: 100%;
+    }
 </style>

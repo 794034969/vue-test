@@ -19,7 +19,8 @@
         }
     })
 </script>
-<style scoped lang="sass">
-    #mian
+<style scoped lang="scss">
+    #mian {
         overflow: hidden
+    }
 </style>

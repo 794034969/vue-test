@@ -48,39 +48,50 @@
         }
     })
 </script>
-<style lang="sass" scoped>
-    #plate
-        width: 100%
-        .plate-title
-            width: 100%
-            height: 30px
-            .plate-title-head
-                height: 30px
-                line-height: 30px
-                float: left
-                .icon-title
-                    display: inline-block
-                    width: 4px
-                    height: 18px
-                    background: #c8a675
-                    margin-right: 10px
-                .title-text-main
-                    font-size: 22px
-                    margin-right: 10px
-                .title-text-minor
-                    font-size: 16px
-            .plate-title-content
+<style lang="scss" scoped>
+    #plate {
+        width: 100%;
+    }
+        .plate-title {
+             width: 100%;
+            height: 30px;
+        }
+            .plate-title-head {
+                height: 30px;
+                line-height: 30px;
+                float: left;
+            }
+                .icon-title {
+                    display: inline-block;
+                    width: 4px;
+                    height: 18px;
+                    background: #c8a675;
+                    margin-right: 10px;
+                }
+                .title-text-main {
+                    font-size: 22px;
+                    margin-right: 10px;
+                }
+                .title-text-minor {
+                    font-size: 16px;
+                }
+                    
+            .plate-title-content {
                 float: right
-        .plate-content
-            .plate-content-left
-                width: 610px
-                float: left
-            .plate-content-right
-                float: right
-                width: 590px
-                img
-                    width: 290px
-                    height: 220px
-                    margin: 0 0 5px 5px
-
+            }
+        .plate-content {
+            .plate-content-left {
+                width: 610px;
+                float: left;
+            }
+            .plate-content-right {
+                float: right;
+                width: 590px;
+                img {
+                    width: 290px;
+                    height: 220px;
+                    margin: 0 0 5px 5px;
+                }
+            }
+        }
 </style>

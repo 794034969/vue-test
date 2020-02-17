@@ -23,7 +23,11 @@ module.exports = {
         modules: false, // 启用 CSS modules
         extract: true, // 是否使用css分离插件
         sourceMap: false, // 开启 CSS source maps?
-        loaderOptions: {} // css预设器配置项
+        loaderOptions: { // css预设器配置项y
+            scss: {
+                data: `@import "~@/assets/styles/mixin.scss";`
+            }
+          } 
     },
     devServer: {
         port: 8080, // 端口

@@ -29,28 +29,33 @@
 
     })
 </script>
-<style lang="sass" scoped>
-    #footer
-        width: 100%
-        height: 150px
-        background-color: #2a2723
-        display: flex
-        justify-content: center
-        .content-box
-            width: 1200px
-            display: flex
-            justify-content: space-around
-            align-items: center
-            .footer-logo
-                width: 200px
-                height: 56px
-
-            .footer-link
-                width: 600px
-                display: flex
-                justify-content: space-around
-                a
-                    color: #ac956d
-                    outline: none
-                    text-decoration: none
+<style lang="scss" scoped>
+    #footer {
+        width: 100%;
+        height: 150px;
+        background-color: #2a2723;
+        display: flex;
+        justify-content: center;
+        .content-box {
+            width: 1200px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .footer-logo {
+                width: 200px;
+                height: 56px;
+            }
+            .footer-link {
+                width: 600px;
+                display: flex;
+                justify-content: space-around;
+                 a {
+                    color: #ac956d;
+                    outline: none;
+                    text-decoration: none;
+                 }
+                    
+            }
+        }
+    }
 </style>
