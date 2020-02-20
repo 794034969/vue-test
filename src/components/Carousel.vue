@@ -22,7 +22,7 @@
                 // 避免直接更改prop，当父组件重新渲染时，该值都会被覆盖。 使用基于属性值的数据或计算属性
                 isBanner: computed(() => props.carouselBanner ),
                 height:  props.carouselHeight,
-                heightComputed: computed({get: () => props.carouselHeight, set: value => state.height = value}),
+                // heightComputed: computed({get: () => props.carouselHeight, set: value => state.height = value}),
                 time: computed(() => props.carouselTime ),
                 imagesArray: computed(() => props.carouselImages )
             })
@@ -30,14 +30,18 @@
                 root.$router.push(path).catch(() => console.log() )    // 解决NavigationDuplicated在控制台报错
             }
             function initSize(): void {
-                let currentDom: any = window.document.getElementById('carousel')
+                let carouselDom: any = window.document.getElementById('carousel')
                 let scrollWidth: number = 0
-                if (currentDom !== null) { scrollWidth = currentDom.offsetWidth }
-                state.heightComputed = `${450 / 1920 * scrollWidth}px`
+                if (carouselDom !== null) { scrollWidth = carouselDom.offsetWidth }
+                state.height = `${450 / 1920 * scrollWidth}px`
+                carouselDom.style.height = state.height
             }
             onMounted(() => {
-                if (state.isBanner) { initSize() }
-                window.onresize = () => { initSize() }
+                if (state.isBanner) { 
+                    initSize() 
+                } else {
+                    state.height = props.carouselHeight
+                }
             })
             return {
                 ...toRefs(state),
@@ -48,7 +52,6 @@
 </script>
 <style lang="scss" scoped>
     #carousel {
-        width: 100%;
         height: 100%;
     }
 </style>

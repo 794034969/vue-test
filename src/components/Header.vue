@@ -17,8 +17,8 @@
             <el-dropdown @command="changeTheme">
                 <el-button>主题<i class="el-icon-arrow-down el-icon--right"></i></el-button>
                 <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item command="theme1">theme1</el-dropdown-item>
-                    <el-dropdown-item command="theme2">theme2</el-dropdown-item>
+                    <el-dropdown-item command="dayTheme">白天模式</el-dropdown-item>
+                    <el-dropdown-item command="nightTheme">夜间模式</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
         </section>
@@ -58,7 +58,7 @@
 </script>
 <style lang="scss" scoped>
     #header{
-        @include bg_color($--color);
+        @include background-color($--day-theme);
         width: 100%;
         height: 80px;
         display: flex;

@@ -1,7 +1,7 @@
 <template>
     <section id="home">
         <Carousel :carouselBanner="true" :carouselHeight="carouselHeight" :carouselTime="carouselTime" :carouselImages="carouselImages"/>
-        <Bulletin :bulletinItems="bulletinItems" style="width: 1200px" />
+        <Bulletin :bulletinItems="bulletinItems" style="width: 1240px;margin: 20px auto;box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);" />
         <section class="home-content">
             <Plate titleName="真人娱乐" titleDepict="汇聚全球顶级真人娱乐平台"/>
             <Plate titleName="精选大促" titleDepict="各种优惠为您撑腰" style="margin: 40px 0"/>

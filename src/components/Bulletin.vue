@@ -1,19 +1,19 @@
 <template>
     <section id="bulletin">
         <el-row>
-            <el-col :span="3" style="text-align: right">
+            <el-col :span="3" style="text-align: center">
                 <i class="el-icon-bell"></i>
                 <span>最新公告：</span>
             </el-col>
             <el-col :span="18">
-                <ul id="bulletinContent" :class="{ 'bulletin-animate': animate===true }">
+                <ul id="bulletinContent" :class="{ 'bulletin-animate': animate === true }">
                     <li v-for="(item,index) in items" :key="index" @click="showDialog(item)">{{ item.text }}</li>
                 </ul>
             </el-col>
-            <el-col :span="3" style="text-align: right">
-                <a href="#">查看更多</a>
+            <el-col :span="3" style="text-align: center">
+                <el-link href="#">查看更多    <i class="el-icon-circle-plus"></i></el-link>
             </el-col>
-        </el-row>
+        </el-row> 
     </section>
 </template>
 <script lang="ts">
@@ -59,13 +59,9 @@
         height: 50px;
         line-height: 50px;
         overflow: hidden;
-        padding: 0 30px;
-        margin: 0 auto;
-        border-bottom: 1px solid #eaeaea;
          .bulletin-animate {
              transition: all 1s;
             margin-top: -50px;
          }
-            
     }
 </style>
