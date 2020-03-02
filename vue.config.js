@@ -6,7 +6,7 @@ const resolve = dir => {
 
 // 线上打包路径，请根据项目实际线上情况
 const BASE_URL = process.env.NODE_ENV === 'production' ? '/' : '/'
-
+// 打包之后若要打开项目，需安装npm install http-server -g，在dist文件夹下启动 http-server
 module.exports = {
     publicPath: BASE_URL,
     outputDir: 'dist', // 打包生成的生产环境构建文件的目录
@@ -30,7 +30,8 @@ module.exports = {
           } 
     },
     devServer: {
-        port: 8080, // 端口
-        proxy: 'https://www.easy-mock.com' // 设置代理
+        port: 80, // 端口
+        proxy: 'http://www.99-yinhe.com/' // 设置代理
     }
 }
+

@@ -8,7 +8,9 @@
     "template": "node scripts/template"
   },
   "dependencies": {
+    "@types/qs": "^6.9.1",
     "@vue/composition-api": "^0.3.4",
+    "axios": "^0.19.2",
     "core-js": "^3.4.3",
     "element-ui": "^2.4.5",
     "vue": "^2.6.10",
@@ -28,6 +30,7 @@
     "element-ui": "^2.13.0",
     "node-sass": "^4.9.2",
     "nprogress": "^0.2.0",
+    "qs": "^6.9.1",
     "sass-loader": "^7.0.3",
     "typescript": "~3.5.3",
     "vue-cli-plugin-element": "^1.0.1",

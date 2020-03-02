@@ -9,22 +9,22 @@ import 'nprogress/nprogress.css';     // NProgress.inc()  固定跳转长度
 
 Vue.use(VueRouter)
 
-const router = new VueRouter({
-  mode: "hash",
+const router: any = new VueRouter({
+  // base: process.env.BASE_URL,
   routes
-})
+} as any)
 
 // 登陆页面路由 name
 const LOGIN_PAGE_NAME = 'login'
 
 // 跳转之前
-router.beforeEach((to, from, next) => {
+router.beforeEach((to: any, from: any, next: any) => {
   NProgress.start()
   next()
 })
 
 // 跳转之后
-router.afterEach(to => {
+router.afterEach((to: any) => {
   NProgress.done()
 })
 

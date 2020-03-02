@@ -23,7 +23,7 @@
 <script lang="ts">
     import { ref, Ref, toRefs, reactive, computed, watch, onMounted, createComponent } from "@vue/composition-api"
     import Carousel from "@/components/Carousel.vue"
-    import { LIVE_ENTERTAINMENT_IMAGES, LIVE_LINK_IMAGES } from "@/config/staticState";
+    import { LIVE_ENTERTAINMENT_IMAGES, LIVE_LINK_IMAGES } from "@/config/staticState"
 
     export default createComponent({
         components: {
