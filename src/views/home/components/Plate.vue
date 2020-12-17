@@ -25,6 +25,7 @@
     import Carousel from "@/components/Carousel.vue"
     import { LIVE_ENTERTAINMENT_IMAGES, LIVE_LINK_IMAGES } from "@/config/staticState"
 
+
     export default createComponent({
         components: {
             Carousel
